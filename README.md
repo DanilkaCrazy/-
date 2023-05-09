@@ -173,6 +173,21 @@ show databases;
 
 ![Screenshot_23](https://user-images.githubusercontent.com/95550202/237007461-2fb07a56-a3b2-425f-ac32-6737734578b8.png)
 
+## Задание 1
+В этом задании и далее используется БД `skillboxdb`, созданная на уроках модуля.
+
+Опишите структуру таблицы discussion_group:
+
+1. Какие в таблице есть колонки и каких типов?
+2. Какие колонки могут принимать значение null?
+3. Какие ограничения на размер значений есть для различных колонок?
+Укажите запросы, которые использовали для выполнения этого задания.
+
+1. Таблица discussion_group состоит из 6 атрибутов (столбцов): Field, Type, Null, Key, Default, Extra и 7 кортежей (строк): group_id, creation_time, name, description, group_tags, admin_user_id, approve_required.
+
+![Screenshot_29](https://user-images.githubusercontent.com/95550202/237016900-ecdbef31-135f-47f9-b163-4095dce65036.png)
+
+
 
 
 
