@@ -37,12 +37,54 @@ sudo apt-get install ca-certificates curl gnupg
 Добавь официальный GPG-ключ Docker:
 
 sudo install -m 0755 -d /etc/apt/keyrings
+
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
 Результат ввода команд:
 
 ![Screenshot_4](https://user-images.githubusercontent.com/95550202/237000751-1d35a129-a832-43a3-bc76-64dd9a624610.png)
+
+Теперь настрой репозиторий командой:
+
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
+Результат:
+
+![Screenshot_5](https://user-images.githubusercontent.com/95550202/237001179-52385971-50c8-4cba-bc24-385cb20857a9.png)
+
+И вот ты дошел до установки самого движка!
+
+Снова обнови свои пакеты уже известной командой:
+
+sudo apt-get update
+
+Результат выполнения команды:
+
+![Screenshot_6](https://user-images.githubusercontent.com/95550202/237001501-67cd9592-7e74-4642-82b9-21854d48563a.png)
+
+Установи Docker Engine, containerd и Docker Compose командой:
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+Результат выполнения команды:
+
+![Screenshot_7](https://user-images.githubusercontent.com/95550202/237001795-91b907d9-58f9-41c1-b72f-7e8fab5f7506.png)
+
+Убедись, что установка Docker Engine прошла успешно, запустив hello-world изображение:
+
+sudo docker run hello-world
+
+Результат выполнения команды:
+
+![Screenshot_8](https://user-images.githubusercontent.com/95550202/237002005-06b307f8-d751-4343-a053-d3b525afa6d0.png)
+
+
+  
 
 
 
