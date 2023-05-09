@@ -23,6 +23,7 @@ sudo apt-get remove docker docker-engine docker.io containerd runc
 
 ![Screenshot_2](https://user-images.githubusercontent.com/95550202/236999520-998f74a9-ceae-4fe4-b876-39e7da9d2ebc.png)
 
+
 Для чего это нужно? Отвечу лаконично - чтобы не возникло проблем! Если Джонни не устраивает такой ответ, он может почитать статьи и докопаться до интернета)
 
 Теперь нужно разрешить использование репозитория по протоколу HTTPS. Используем:
@@ -32,6 +33,17 @@ sudo apt-get install ca-certificates curl gnupg
 Результат выполнения команды:
 
 ![Screenshot_3](https://user-images.githubusercontent.com/95550202/237000177-5390f96f-098b-43a0-a527-0dad0a80ffb1.png)
+
+Добавь официальный GPG-ключ Docker:
+
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+Результат ввода команд:
+
+![Screenshot_4](https://user-images.githubusercontent.com/95550202/237000751-1d35a129-a832-43a3-bc76-64dd9a624610.png)
+
 
 
 
