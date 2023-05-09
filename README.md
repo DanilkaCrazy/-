@@ -239,8 +239,21 @@ SELECT user_id AS user_login, registration_type AS sign_on_with FROM user;
 ## Задание 3
 Выберите все дискуссионные группы, в которых требуется подтверждение (аппрув). Ответ предоставьте в виде выполняемого запроса к СУБД MySQL.
 
+Используем данные таблицы users_to_discussion_groups:
+
+![Screenshot_38](https://user-images.githubusercontent.com/95550202/237059150-2f53c912-9851-4757-8f8c-36206ead442c.png)
+
+Необходимо написать такой запрос, при котором подверждение не равно NULL:
+
+SELECT group_id FROM users_to_discussion_groups WHERE approved is not NULL;
+
+Результат выполнения запроса следующий:
+
+![Screenshot_37](https://user-images.githubusercontent.com/95550202/237058285-d8989d53-8836-4674-bed0-d3d60ff2ae5d.png)
 
 
+## Задание 4
+Выберите все дискуссионные группы, созданные в 2018 году. Ответ предоставьте в виде выполняемого запроса к СУБД MySQL.
 
 
 
