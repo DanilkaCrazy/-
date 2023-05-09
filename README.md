@@ -14,3 +14,25 @@ sudo apt update
 Результат работы команды представлен на скриншоте:
 
 ![Screenshot_1](https://user-images.githubusercontent.com/95550202/236998657-6769c030-cd01-439e-9d6d-81485fa7560e.png)
+
+Удали старые версии командой:
+
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+Результат выполнения команды:
+
+![Screenshot_2](https://user-images.githubusercontent.com/95550202/236999520-998f74a9-ceae-4fe4-b876-39e7da9d2ebc.png)
+
+Для чего это нужно? Отвечу лаконично - чтобы не возникло проблем! Если Джонни не устраивает такой ответ, он может почитать статьи и докопаться до интернета)
+
+Теперь нужно разрешить использование репозитория по протоколу HTTPS. Используем:
+
+sudo apt-get install ca-certificates curl gnupg
+
+Результат выполнения команды:
+
+![Screenshot_3](https://user-images.githubusercontent.com/95550202/237000177-5390f96f-098b-43a0-a527-0dad0a80ffb1.png)
+
+
+
+
