@@ -243,17 +243,39 @@ SELECT user_id AS user_login, registration_type AS sign_on_with FROM user;
 
 ![Screenshot_38](https://user-images.githubusercontent.com/95550202/237059150-2f53c912-9851-4757-8f8c-36206ead442c.png)
 
-Необходимо написать такой запрос, при котором подверждение не равно NULL:
+Необходимо проверить, как выражается подтверждение запроса в таблице, можно вывести только колонку approved или всю таблицу целиком. Используем запрос:
 
-SELECT group_id FROM users_to_discussion_groups WHERE approved is not NULL;
+SELECT approved FROM users_to_discussion_group;
+
+Результат выполнения запроса представлен на рисунке:
+
+![Screenshot_41](https://github.com/DanilkaCrazy/Skillbox_Database_for_Jonny/assets/95550202/a77bb061-2ba4-465b-a812-a33ea0d7044f)
+
+Теперь понятно, что запрос подтвержден, когда в значении 1. Реализуем запрос с фильтрацией результата через WHERE:
+
+SELECT group_id FROM users_to_discussion_groups WHERE approved = 1;
 
 Результат выполнения запроса следующий:
 
-![Screenshot_37](https://user-images.githubusercontent.com/95550202/237058285-d8989d53-8836-4674-bed0-d3d60ff2ae5d.png)
+![Screenshot_44](https://github.com/DanilkaCrazy/Skillbox_Database_for_Jonny/assets/95550202/a32e2810-3622-4aa8-a3de-6de82e12a79f)
+
+Всего таких групп существует:
+
+![Screenshot_43](https://github.com/DanilkaCrazy/Skillbox_Database_for_Jonny/assets/95550202/6735c994-7ee0-4425-bf67-7bd3f9d8ad52)
 
 
 ## Задание 4
 Выберите все дискуссионные группы, созданные в 2018 году. Ответ предоставьте в виде выполняемого запроса к СУБД MySQL.
+
+Для этого используем следующий запрос:
+
+SELECT group_id, creation_time, name FROM discussion_group WHERE creation_time LIKE '2018%';
+
+Результат выполения запроса:
+
+![Screenshot_40](https://github.com/DanilkaCrazy/Skillbox_Database_for_Jonny/assets/95550202/d1b15257-719d-4c1d-aea0-e608ec7ac5b6)
+
+
 
 
 
