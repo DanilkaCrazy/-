@@ -83,6 +83,87 @@ sudo docker run hello-world
 
 ![Screenshot_8](https://user-images.githubusercontent.com/95550202/237002005-06b307f8-d751-4343-a053-d3b525afa6d0.png)
 
+Дальше ты должен выпустить этого демона (ну точнее запустить) командой:
+
+sudo dockerd
+
+Результат выполнения команды:
+
+![Screenshot_9](https://user-images.githubusercontent.com/95550202/237002789-6850964d-d75f-411e-80de-f0fa19a28406.png)
+
+Можно глянуть какие статусы способен принимать Docker командой:
+
+sudo service docker status
+
+Результат выполнения команды:
+
+![Screenshot_10](https://user-images.githubusercontent.com/95550202/237003180-7c89288c-7806-4392-a36b-1b8bb49a8991.png)
+
+Запусти Docker следующей командой:
+
+docker start
+
+Результат выполнения команды:
+
+![Screenshot_11](https://user-images.githubusercontent.com/95550202/237003366-42981505-42b5-40a0-9652-e053c6293e11.png)
+
+## Работа с MySQL
+### MySQL - это свободная реляционная система управления базами данных.
+
+Теперь необходимо скачать image mySQL сервера командой, представленной на скриншоте:
+
+![Screenshot_24](https://user-images.githubusercontent.com/95550202/237004065-527c4396-b760-45a4-879b-1627ec4240aa.png)
+
+Запускаем сервер:
+
+![Screenshot_12](https://user-images.githubusercontent.com/95550202/237004398-d78c42d1-551f-4ee8-8632-013301dc9f63.png)
+
+Где задаем имя: skilbox-mysql и пароль: pass
+
+Просматриваем запущенный контейнер командой:
+
+docker ps
+
+Результат выполнения:
+
+![Screenshot_13](https://user-images.githubusercontent.com/95550202/237004744-5a9bb531-051f-4a99-8795-1eed225350f1.png)
+
+Используем следующую команду для подключения БД внутри контейнера:
+
+![Screenshot_16](https://user-images.githubusercontent.com/95550202/237004973-b85c8c29-f6e8-485f-af47-c654610ac83e.png)
+
+Где интерактивно указываем пользователя, пароль и путь файла.
+
+Сохраняем файлы с созданными БД и их заполнением (выложены здесь как файлы schema.sql и data.sql):
+
+![Screenshot_15](https://user-images.githubusercontent.com/95550202/237005388-490fe818-ac7d-4aed-9fec-056ee4a47c4e.png)
+
+После выполнения предыдущей команды произошло подключение БД и теперь можно просмотреть базы данных командой:
+
+show databases;
+
+Просмотр баз данных:
+
+![Screenshot_17](https://user-images.githubusercontent.com/95550202/237005811-5b61acbc-daf2-451a-81c1-bb3214f6484e.png)
+
+Отмечу, что все команды, которые отправляются на сервер должны заканиваться точкой с запятой.
+Затем сервер возвращает ответ, который показан на рисунке.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
