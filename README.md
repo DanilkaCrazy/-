@@ -149,6 +149,35 @@ show databases;
 Отмечу, что все команды, которые отправляются на сервер должны заканиваться точкой с запятой.
 Затем сервер возвращает ответ, который показан на рисунке.
 
+Перейдем к рандомной базе данных:
+
+![Screenshot_18](https://user-images.githubusercontent.com/95550202/237006514-ff32d7c6-e5e8-49f9-8e59-1d14a2a3e8b5.png)
+
+Просмотрим ее таблицы с помощью команды представленной на рисунке:
+
+![Screenshot_19](https://user-images.githubusercontent.com/95550202/237006596-8191e089-b2b7-452c-b73e-41aff643261d.png)
+
+Просмотр системных таблиц, которые описывают хранение созданных данных:
+
+![Screenshot_20](https://user-images.githubusercontent.com/95550202/237006902-58d0dd08-1e89-4b72-a4aa-05dbd5cc33e2.png)
+
+Выйти из СУБД можно с помощью следующей команды или нажав клавиши Ctrl + D:
+
+![Screenshot_21](https://user-images.githubusercontent.com/95550202/237007093-92529a86-1a0c-4295-8b15-1aa7a9c5f841.png)
+
+Укажем пути импортированных файлов:
+
+![Screenshot_22](https://user-images.githubusercontent.com/95550202/237007321-b1896718-b0f1-43b2-9795-3a3acdcd110c.png)
+
+Теперь снова запускаем сервер:
+
+![Screenshot_23](https://user-images.githubusercontent.com/95550202/237007461-2fb07a56-a3b2-425f-ac32-6737734578b8.png)
+
+
+
+
+
+
 
 
 
