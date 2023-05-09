@@ -183,7 +183,7 @@ show databases;
 3. Какие ограничения на размер значений есть для различных колонок?
 Укажите запросы, которые использовали для выполнения этого задания.
 
-1. Таблица discussion_group состоит из 6 атрибутов (столбцов): Field, Type, Null, Key, Default, Extra и 7 кортежей (строк): group_id, creation_time, name, description, group_tags, admin_user_id, approve_required.
+1) Таблица discussion_group состоит из 6 атрибутов (столбцов): Field, Type, Null, Key, Default, Extra и 7 кортежей (строк): group_id, creation_time, name, description, group_tags, admin_user_id, approve_required.
 
 ![Screenshot_29](https://user-images.githubusercontent.com/95550202/237016900-ecdbef31-135f-47f9-b163-4095dce65036.png)
 
